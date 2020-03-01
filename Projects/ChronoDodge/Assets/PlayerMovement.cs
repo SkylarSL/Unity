@@ -51,14 +51,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "ball")
         {
             gameManager.ActivateResetGame();
         }
-        else if(collision.gameObject.name == "Point")
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "point")
         {
-            Debug.Log("got a point");
             pointSpawner.Spawn();
+            gameManager.IncrementPoints();
         }
     }
 
