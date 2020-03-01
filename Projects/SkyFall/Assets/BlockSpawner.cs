@@ -44,12 +44,14 @@ public class BlockSpawner : MonoBehaviour
         //choose a spawn point to not spawn a block on
         int randomIndex = Random.Range(0, len);
 
+        Vector3 offset = new Vector3(0, 0, 2);
+
         for (int i = 0; i < len; i++)
         {
             //create a block when not equal to i
             if (randomIndex != i)
             {
-                Instantiate(blockObject, spawnPoints[i].position, Quaternion.identity);
+                Instantiate(blockObject, spawnPoints[i].position + offset, Quaternion.identity);
             }
         }
     }
