@@ -45,11 +45,11 @@ public class BallSpawner : MonoBehaviour
             GameObject ballSpeed = Instantiate(ball, ballSpawner[spawnIndex].transform.position, Quaternion.Euler(0, 0, 180 + angleOffset));
             if(angleOffset == 0)
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500 / Time.timeScale, ForceMode2D.Force);
             }
             else
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150 / Time.timeScale, ForceMode2D.Force);
             }
         }
         else if (ballType == "right")
@@ -57,11 +57,11 @@ public class BallSpawner : MonoBehaviour
             GameObject ballSpeed = Instantiate(ball, ballSpawner[spawnIndex].transform.position, Quaternion.Euler(0, 0, 90 + angleOffset));
             if (angleOffset == 0)
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500 / Time.timeScale, ForceMode2D.Force);
             }
             else
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150 / Time.timeScale, ForceMode2D.Force);
             }
         }
         else if (ballType == "bot")
@@ -69,11 +69,11 @@ public class BallSpawner : MonoBehaviour
             GameObject ballSpeed = Instantiate(ball, ballSpawner[spawnIndex].transform.position, Quaternion.Euler(0, 0, 0 + angleOffset));
             if (angleOffset == 0)
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500 / Time.timeScale, ForceMode2D.Force);
             }
             else
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150 / Time.timeScale, ForceMode2D.Force);
             }
         }
         else if (ballType == "left")
@@ -81,11 +81,11 @@ public class BallSpawner : MonoBehaviour
             GameObject ballSpeed = Instantiate(ball, ballSpawner[spawnIndex].transform.position, Quaternion.Euler(0, 0, -90 + angleOffset));
             if (angleOffset == 0)
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 500 / Time.timeScale, ForceMode2D.Force);
             }
             else
             {
-                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150, ForceMode2D.Force);
+                ballSpeed.GetComponent<Rigidbody2D>().AddForce(ballSpeed.transform.up * 150 / Time.timeScale, ForceMode2D.Force);
             }
         }
         else

@@ -10,6 +10,8 @@ TagManager:
   - bot
   - ball
   - point
+  - spark
+  - manaPotion
   layers:
   - Default
   - TransparentFX

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointSpawner : MonoBehaviour
+public class ManaPotionSpawner : MonoBehaviour
 {
 
-    public GameObject point;
+    public GameObject manaPotion;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,6 @@ public class PointSpawner : MonoBehaviour
         float randomX = Random.Range(-12, 12);
         float randomY = Random.Range(-12, 12);
         Vector2 position = new Vector2(randomX, randomY);
-        Instantiate(point, position, Quaternion.identity);
+        Instantiate(manaPotion, position, Quaternion.identity);
     }
 }

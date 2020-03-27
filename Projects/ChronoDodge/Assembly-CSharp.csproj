@@ -62,14 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BallMovement.cs" />
-    <Compile Include="Assets\BallSpawner.cs" />
-    <Compile Include="Assets\FollowPlayer.cs" />
-    <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\PlayerMovement.cs" />
-    <Compile Include="Assets\PointScript.cs" />
-    <Compile Include="Assets\PointSpawner.cs" />
-    <Compile Include="Assets\TimeManager.cs" />
+    <Compile Include="Assets\Scripts\BallMovement.cs" />
+    <Compile Include="Assets\Scripts\BallSpawner.cs" />
+    <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\ManaPotionSpawner.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ResourceManager.cs" />
+    <Compile Include="Assets\Scripts\SparkSpawner.cs" />
+    <Compile Include="Assets\Scripts\TimeManager.cs" />
+    <None Include="Assets\Fonts\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Development/GameDev/Projects/ChronoDodge/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
