@@ -12,6 +12,7 @@ TagManager:
   - point
   - spark
   - manaPotion
+  - ResourceManager
   layers:
   - Default
   - TransparentFX

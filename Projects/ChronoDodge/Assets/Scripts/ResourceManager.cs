@@ -66,7 +66,7 @@ public class ResourceManager : MonoBehaviour
         sparkSlider.value -= amount;
     }
 
-    public int GetSpark()
+    public int GetCurrentSpark()
     {
         return (int)sparkSlider.value;
     }

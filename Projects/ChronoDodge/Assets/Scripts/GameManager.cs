@@ -7,11 +7,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameEndScreen;
-    public GameObject gameStartScreen;
-    public GameObject storyScreen;
     public GameObject resourceScreen;
     public GameObject scoreScreen;
-    public GameObject gameCredits;
 
     public Text scorePanel;
 
@@ -21,9 +18,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("ADSF");
+        //Debug.Log("ADSF");
         score = 0;
-        //gameStartScreen.SetActive(true);
+        scoreScreen.SetActive(true);
+        resourceScreen.SetActive(true);
     }
 
     // Update is called once per frame
@@ -49,31 +47,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame()
-    {
-        scoreScreen.SetActive(true);
-        resourceScreen.SetActive(true);
-        gameStartScreen.SetActive(false);
-    }
-
     public void EndGame()
     {
         scoreScreen.SetActive(false);
         resourceScreen.SetActive(false);
         gameEndScreen.SetActive(false);
-        gameCredits.SetActive(true);
-    }
-
-    public void ReadStory()
-    {
-        gameStartScreen.SetActive(false);
-        storyScreen.SetActive(true);
-    }
-
-    public void GoBackFromStory()
-    {
-        gameStartScreen.SetActive(true);
-        storyScreen.SetActive(false);
+        SceneManager.LoadScene("EndGame");
     }
 
     public void IncrementPoints()

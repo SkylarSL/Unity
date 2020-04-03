@@ -64,12 +64,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallMovement.cs" />
     <Compile Include="Assets\Scripts\BallSpawner.cs" />
+    <Compile Include="Assets\Scripts\EndGameManager.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ManaPotionSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\SparkSpawner.cs" />
+    <Compile Include="Assets\Scripts\StartGameManager.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
     <None Include="Assets\Fonts\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">

@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         float currentMana = resourceManager.GetCurrentMana();
+        float currentSpark = resourceManager.GetCurrentSpark();
         if (Input.GetKeyDown("n") && currentMana > 30)
         {
             BackInTime();
