@@ -22,8 +22,8 @@ public class FastEnemyFunctions : MonoBehaviour
     {
         Vector3 dir = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

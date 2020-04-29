@@ -62,20 +62,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CollisionParticleFunction.cs" />
     <Compile Include="Assets\DDOL.cs" />
     <Compile Include="Assets\EmberFunctions.cs" />
     <Compile Include="Assets\EmberSpawner.cs" />
+    <Compile Include="Assets\EndGameFunctions.cs" />
     <Compile Include="Assets\EnemyFunctions.cs" />
     <Compile Include="Assets\EnemySpawner.cs" />
     <Compile Include="Assets\ExplosionFunctions.cs" />
     <Compile Include="Assets\FastEnemyFunctions.cs" />
+    <Compile Include="Assets\GameFunctions.cs" />
     <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\GameOverFunctions.cs" />
     <Compile Include="Assets\HardEnemyFunctions.cs" />
     <Compile Include="Assets\PlayerFunctions.cs" />
     <Compile Include="Assets\ProjectileFunctions.cs" />
-    <Compile Include="Assets\StartSceneFunctions.cs" />
+    <Compile Include="Assets\StartGameFunctions.cs" />
     <Compile Include="Assets\WonkyEnemyFunctions.cs" />
     <None Include="Assets\Fonts\Eater\OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">

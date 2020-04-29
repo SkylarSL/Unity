@@ -6,7 +6,9 @@ public class WonkyEnemyFunctions : MonoBehaviour
 {
 
     //attributes
-    private float moveSpeed = 1;
+    private int moveSpeed;
+    private int timeSinceLastMove = 0;
+    private float angle;
 
     //scripts
     public EmberSpawner emberSpawner;
@@ -20,23 +22,37 @@ public class WonkyEnemyFunctions : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 dir = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        float angleOffset = 90f;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector3.right * 0.0005f * Time.deltaTime);
-        angle = angle + Random.Range(-angleOffset, angleOffset);
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector3.right * 2 * Time.deltaTime);
-        angle = angle + Random.Range(-angleOffset, angleOffset);
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector3.right * 2 * Time.deltaTime);
-        angle = angle + Random.Range(-angleOffset, angleOffset);
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector3.right * 2 * Time.deltaTime);
-        angle = angle + Random.Range(-angleOffset, angleOffset);
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.Translate(Vector3.right * 2 * Time.deltaTime);
+        if (Time.time < 136)
+        {
+            moveSpeed = 2;
+        }
+        else
+        {
+            moveSpeed = 4;
+        }
+
+        float angleOffset = 101f;
+        if (timeSinceLastMove == 1)
+        {
+            Vector3 dir = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
+            angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        }
+        else if (timeSinceLastMove == 60)
+        {
+            angle = angle + Random.Range(-angleOffset, angleOffset);
+        }
+        else if(timeSinceLastMove == 120)
+        {
+            angle = angle + Random.Range(-angleOffset, angleOffset);
+        }
+        else if(timeSinceLastMove > 180)
+        {
+            timeSinceLastMove = 0;
+        }
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+        timeSinceLastMove++;
+
 
         /*transform.rotation = Quaternion.Euler(0, 0, angle);
         transform.Translate(Vector3.right * 0.5f * Time.deltaTime);*/

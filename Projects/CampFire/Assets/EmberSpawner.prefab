@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 295889951174198929}
   m_Layer: 0
   m_Name: EmberSpawner
-  m_TagString: Untagged
+  m_TagString: EmberSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

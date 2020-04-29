@@ -35,7 +35,7 @@ public class PlayerFunctions : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0) && lightSource.pointLightInnerRadius > 0f)
         {
@@ -81,7 +81,14 @@ public class PlayerFunctions : MonoBehaviour
 
         if(Time.timeSinceLevelLoad > timeOffset)
         {
-            emberSpawner.SpawnEmberLow(0.85f, 3.5f, Vector3.zero);
+            if(Time.time < 101)
+            {
+                emberSpawner.SpawnEmberLow(0.85f, 3.5f, Vector3.zero);
+            }
+            else
+            {
+                emberSpawner.SpawnEmberMed(0.85f, 3.5f, Vector3.zero);
+            }
             timeOffset++;
         }
     }

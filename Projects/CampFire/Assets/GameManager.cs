@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
     }
@@ -51,13 +51,17 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        GameObject.Find("Player").GetComponent<PlayerFunctions>().enabled = false;
+        GameObject.Find("PlayerAppearance").GetComponent<PlayerFunctions>().enabled = false;
         GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().enabled = false;
-        /*GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
         {
             enemy.GetComponent<EnemyFunctions>().enabled = false;
         }
-        GameObject.Find("EmberSpawner").GetComponent<EmberSpawner>().enabled = false;*/
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

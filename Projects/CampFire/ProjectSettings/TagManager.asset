@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Explosion
   - GameOverCanvas
+  - EmberSpawner
   layers:
   - Default
   - TransparentFX
